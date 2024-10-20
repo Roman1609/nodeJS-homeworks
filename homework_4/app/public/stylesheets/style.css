@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.rendered-items li{
+  display: flex;
+  justify-content: space-between;
+}
+form, form ul{
+  display: flex;
+  justify-content: space-between;
+}
+form ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form {
+  gap: 20px;
+}
+form ul {
+  flex: 1 0 auto;
+}
+.form button {
+  flex: 0 1 auto;
+}
+
+/* ================= */
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.job-card > div {
+  display: flex;
+  gap: 20px;
+}

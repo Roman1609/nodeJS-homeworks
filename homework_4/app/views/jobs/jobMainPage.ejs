@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Job Counter</title>
+</head>
+<body>
+    <h1>Count your job</h1>
+    <!-- <form action="/job" method="post">
+        <ul>
+            <li>
+                <label for="#">Виріб</label>
+                <input type="text" name="itemName">
+            </li>
+            <li>
+                <label for="#">Кількість</label>
+                <input type="number" name="count">
+            </li>
+            <li>
+                <label for="#">Ціна за од.</label>
+                <input type="number" name="price">
+            </li>
+            <li>
+                <label for="#">Сума за вироби</label>
+                <input disabled type="number" name="totalOfItems">
+            </li>
+        </ul>
+        <button>Додати ще</button>
+    </form> -->
+    <hr>
+    <ul class="rendered-items">
+        <li>
+            <span>№</span>
+            <span>Назва виробу</span>
+            <span>Кількість</span>
+            <span>Ціна за од.</span>
+            <span>Сума усіх виробів</span>
+            <span>Детальніше</span>
+        </li>
+        <hr>
+        <% jobs.forEach(job => { %>
+        <li>
+            <span><%= job.id%>. </span>
+            <span><%= job.itemName%></span>
+            <span><%= job.count%></span>
+            <span><%= job.price%></span>
+            <span><%= job.totalOfItems%></span>
+            <a href="/job/<%=job.id %>"> Детальніше </a>
+        </li>
+        <% }) %>
+    </ul>
+    <hr>
+    <a href="job/create">Додати вироби</a>
+</body>
+</html>

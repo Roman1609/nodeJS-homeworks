@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Job Counter</title>
+</head>
+<body>
+    <h1>Job Item</h1>
+    <hr>
+    <div class="job-card">
+        <span><strong>id:</strong> <%= job.id%>. </span>
+        <span><strong>Назва виробу:</strong> <%= job.itemName%></span>
+        <span><strong>Кількість виробів:</strong> <%= job.count%></span>
+        <span><strong>Ціна за одиницю:</strong> <%= job.price%></span>
+        <span><strong>Сума усіх виробів:</strong> <%= job.totalOfItems%></span>
+        <div>
+            <button class="edit">Редагувати</button>
+            <button class="delete">Видалити</button>
+        </div>
+    </div>
+    <hr>
+    <a href="/job">На головну</a>
+</body>
+</html>
